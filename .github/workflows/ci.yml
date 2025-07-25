@@ -77,20 +77,11 @@ jobs:
         echo "### FitNesse Tests" >> $GITHUB_STEP_SUMMARY
         echo "🎭 FitNesse tests executed - Check artifacts for results" >> $GITHUB_STEP_SUMMARY
 
-  deploy-reports:
-    name: 📚 Deploy Reports to GitHub Pages
+  build-reports:
+    name: 📦 Build Reports
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: 📥 Download Test Artifacts
@@ -99,11 +90,6 @@ jobs:
         name: test-results
         path: ./reports
         
-    - name: 📋 Setup Pages
-      uses: actions/configure-pages@v4
-      with:
-        enablement: true
-      
     - name: 🗂️ Prepare Pages Content
       run: |
         mkdir -p pages
@@ -183,7 +169,22 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./pages
-        
+
+  deploy-reports:
+    name: 🚀 Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build-reports
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:        
     - name: 🚀 Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
