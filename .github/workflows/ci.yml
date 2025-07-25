@@ -94,10 +94,19 @@ jobs:
       run: |
         mkdir -p pages
         
-        # Copy test reports
+        # Debug: Show what we have
+        echo "📁 Contents of ./reports:"
+        ls -la ./reports/ || echo "No reports directory found"
+        
+        # Copy test reports preserving structure
         if [ -d "./reports" ]; then
           cp -r ./reports/* pages/
+          echo "✅ Copied reports to pages directory"
         fi
+        
+        # Debug: Show final structure  
+        echo "📁 Final pages structure:"
+        find pages/ -name "*.html" | head -10 || echo "No HTML files found"
         
         # Create index.html
         cat > pages/index.html << 'EOF'
@@ -134,19 +143,19 @@ jobs:
                     <div class="report-card">
                         <h3><span class="badge spock">SPOCK</span> Unit Tests</h3>
                         <p>Groovy-basierte BDD Tests für Unit- und Integration-Testing</p>
-                        <a href="./reports/tests/test/index.html">📊 Spock Test Report</a>
+                        <a href="./build/reports/tests/test/index.html">📊 Spock Test Report</a>
                     </div>
                     
                     <div class="report-card">
                         <h3><span class="badge coverage">COVERAGE</span> Code Coverage</h3>
                         <p>JaCoCo Code Coverage Report mit detaillierter Analyse</p>
-                        <a href="./reports/jacoco/test/html/index.html">📈 Coverage Report</a>
+                        <a href="./build/reports/jacoco/test/html/index.html">📈 Coverage Report</a>
                     </div>
                     
                     <div class="report-card">
                         <h3><span class="badge fitnesse">FITNESSE</span> Acceptance Tests</h3>
                         <p>Wiki-basierte Acceptance Tests für Business-Logic</p>
-                        <a href="./testResults/">🎭 FitNesse Results</a>
+                        <a href="./src/test/fitnesse/FitNesseRoot/files/testResults/">🎭 FitNesse Results</a>
                     </div>
                 </div>
                 
