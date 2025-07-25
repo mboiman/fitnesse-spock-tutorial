@@ -101,6 +101,8 @@ jobs:
         
     - name: 📋 Setup Pages
       uses: actions/configure-pages@v4
+      with:
+        enablement: true
       
     - name: 🗂️ Prepare Pages Content
       run: |
