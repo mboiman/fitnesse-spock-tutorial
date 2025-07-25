@@ -1,0 +1,23 @@
+Entwickle ein FitNesse-Spock Test-Framework als praktischen Kurs auf Deutsch.
+
+ZIELE:
+- Lehrreiches Tutorial mit echten Beispielen
+- FitNesse für Business-Tests, Spock für Developer-Tests
+- GitHub Actions mit beeindruckender Test-Summary
+- Automatische Reports mit direkten Links
+
+BEISPIEL-SZENARIO: Online-Buchhandlung
+- REST API: Buchsuche, Warenkorb, Bestellung
+- Datenbank: Kundenverwaltung, Lagerbestand
+- UI: Login, Produktsuche, Checkout
+
+FEATURES:
+- Parallele Test-Ausführung
+- Test-Reports als GitHub Pages
+- Emoji-reiche GitHub Summary
+- Fixture-Galerie mit 10+ Beispielen
+
+DOKUMENTATION:
+- Schritt-für-Schritt Anleitungen
+- Best Practices
+- Troubleshooting Guide

@@ -1,0 +1,36 @@
+!1 Versandkosten-Tests
+
+Test der Versandkosten-Staffelung basierend auf dem Bestellwert.
+
+!define TEST_SYSTEM {slim}
+
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test
+
+!2 Versandkosten-Regeln
+
+* Bestellwert < 20€: 4,95€ Versand
+* Bestellwert 20-49,99€: 2,95€ Versand  
+* Bestellwert ≥ 50€: Kostenloser Versand
+
+!2 Test-Tabelle
+
+!|de.tutorial.fixtures.SimpleShippingCostFixture|
+|bestellwert|versandkosten?|versandkostenHinweis?|fehlbetragFuerKostenlosenVersand?|
+|10.00|4.95|Standard-Versand|40.00|
+|15.00|4.95|Standard-Versand|35.00|
+|19.99|4.95|Standard-Versand|30.01|
+|20.00|2.95|Reduzierte Versandkosten|30.00|
+|35.00|2.95|Reduzierte Versandkosten|15.00|
+|49.99|2.95|Reduzierte Versandkosten|0.01|
+|50.00|0.00|Kostenloser Versand!|0.00|
+|75.00|0.00|Kostenloser Versand!|0.00|
+|100.00|0.00|Kostenloser Versand!|0.00|
+
+!2 Zusammenfassung
+
+* Versandkosten werden korrekt nach Bestellwert gestaffelt
+* Kundenfreundliche Hinweise werden angezeigt
+* Fehlbetrag für kostenlosen Versand wird berechnet

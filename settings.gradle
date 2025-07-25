@@ -1,0 +1,8 @@
+rootProject.name = 'fitnesse-spock-tutorial'
+
+// Build Cache aktivieren
+buildCache {
+    local {
+        enabled = true
+    }
+}

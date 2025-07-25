@@ -1,0 +1,157 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'org.springframework.boot' version '3.5.3'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'jacoco'
+}
+
+group = 'de.tutorial'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    
+    // Database
+    runtimeOnly 'com.h2database:h2:2.3.232'
+    
+    // Groovy
+    implementation 'org.apache.groovy:groovy:4.0.24'
+    
+    // Spock Framework - Neueste stabile Version
+    testImplementation 'org.spockframework:spock-core:2.4-M6-groovy-4.0'
+    testImplementation 'org.spockframework:spock-spring:2.4-M6-groovy-4.0'
+    
+    // FitNesse - Neueste Version (Februar 2025)
+    testImplementation 'org.fitnesse:fitnesse:20250223:standalone'
+    testImplementation 'org.fitnesse:fitnesse:20250223'
+    
+    // Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    
+    // Logging
+    implementation 'org.slf4j:slf4j-api'
+    implementation 'ch.qos.logback:logback-classic'
+}
+
+test {
+    useJUnitPlatform()
+    
+    // Parallele Test-Ausführung
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+        showStandardStreams = false
+    }
+    
+    // Test-Kategorien
+    systemProperty 'junit.jupiter.execution.parallel.enabled', 'true'
+    systemProperty 'junit.jupiter.execution.parallel.mode.default', 'concurrent'
+}
+
+// FitNesse Tasks
+task fitnesseStart(type: JavaExec) {
+    group = 'FitNesse'
+    description = 'Startet den FitNesse Wiki Server'
+    classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
+    mainClass = 'fitnesseMain.FitNesseMain'
+    args = ['-p', '9090', '-d', 'src/test/fitnesse']
+    standardInput = System.in
+    
+    doFirst {
+        println "FitNesse Classpath: ${classpath.asPath}"
+    }
+}
+
+task fitnesseTest(type: JavaExec) {
+    group = 'FitNesse'
+    description = 'Führt alle FitNesse Tests aus'
+    classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
+    mainClass = 'fitnesseMain.FitNesseMain'
+    args = ['-c', 'FrontPage?suite&format=text', '-d', 'src/test/fitnesse']
+}
+
+// Einzelne FitNesse Test Tasks
+task fitnessePriceTest(type: JavaExec) {
+    group = 'FitNesse'
+    description = 'Führt PriceCalculations Tests aus'
+    classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
+    mainClass = 'fitnesseMain.FitNesseMain'
+    args = ['-c', 'PriceCalculations?test', '-d', 'src/test/fitnesse']
+    
+    doFirst {
+        // Sicherstellen, dass die Klassen kompiliert sind
+        println "Executing FitNesse test: PriceCalculations"
+    }
+}
+
+task fitnesseShippingTest(type: JavaExec) {
+    group = 'FitNesse'
+    description = 'Führt ShippingCosts Tests aus'
+    classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
+    mainClass = 'fitnesseMain.FitNesseMain'
+    args = ['-c', 'ShippingCosts?test&format=text', '-d', 'src/test/fitnesse']
+}
+
+// JaCoCo Code Coverage
+jacoco {
+    toolVersion = "0.8.13"
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        html.required = true
+        csv.required = false
+    }
+    
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                '**/config/**',
+                '**/entity/**',
+                '**/Application.class'
+            ])
+        }))
+    }
+}
+
+// Custom Tasks
+task testUnit(type: Test) {
+    group = 'verification'
+    description = 'Führt nur Unit Tests aus'
+    useJUnitPlatform {
+        includeTags 'unit'
+    }
+}
+
+task testIntegration(type: Test) {
+    group = 'verification'
+    description = 'Führt nur Integration Tests aus'
+    useJUnitPlatform {
+        includeTags 'integration'
+    }
+}
+
+// Wrapper Task
+wrapper {
+    gradleVersion = '8.14.3'
+    distributionType = Wrapper.DistributionType.ALL
+}

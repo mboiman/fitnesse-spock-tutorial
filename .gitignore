@@ -1,0 +1,83 @@
+
+# Build directories
+build/
+.gradle/
+bin/
+out/
+target/
+
+# IDE specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# FitNesse generated files (NICHT properties.xml und content.txt!)
+src/test/fitnesse/FitNesseRoot/files/testResults/
+src/test/fitnesse/FitNesseRoot/ErrorLogs/
+src/test/fitnesse/FitNesseRoot/RecentChanges*
+src/test/fitnesse/FitNesseRoot/RecentChanges.wiki
+src/test/fitnesse/.svn/
+src/test/fitnesse/.update
+src/test/fitnesse/FitNesseRoot/PageHeader.wiki
+src/test/fitnesse/FitNesseRoot/PageFooter.wiki
+velocity.log
+fitnesse-standalone.jar
+
+# Logs
+logs/
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Java specific
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+hs_err_pid*
+
+# Test reports
+test-results/
+test-output/
+
+# Package files
+*.tar.gz
+*.zip
+
+# Local environment files
+.env
+.env.local
+*.local
+
+# Claude Flow generated files (falls verwendet)
+.claude/settings.local.json
+.claude/
+CLAUDE.md
+.roomodes/
+.roo/
+.mcp.json
+claude-flow.config.json
+.swarm/
+.hive-mind/
+memory/
+coordination/
+*.db
+*.db-journal
+*.db-wal
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+claude-flow
+claude-flow.bat
+claude-flow.ps1
+hive-mind-prompt-*.txt

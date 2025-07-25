@@ -1,0 +1,12 @@
+!1 Einfacher Test
+
+!define TEST_SYSTEM {slim}
+
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test
+
+!2 Calculator Test
+
+!|de.tutorial.fixtures.SimpleCalculator|
+|a|b|addPlusEquals?|
+|2|3|5|
+|5|5|10|

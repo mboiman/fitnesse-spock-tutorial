@@ -1,0 +1,75 @@
+!1 Fixture-Galerie 🎨
+
+Diese Seite demonstriert verschiedene Fixture-Typen mit praktischen Beispielen aus unserer Online-Buchhandlung.
+
+!define TEST_SYSTEM {slim}
+
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test
+
+!2 1. Column Fixture Example - Preisberechnungen mit Rabatten
+
+!|de.tutorial.fixtures.ColumnFixtureExample|
+|buchpreis|anzahl|rabatt prozent|zwischensumme?|rabattbetrag?|endsumme?|mehrwertsteuer?|gesamtpreis mit mwst?|
+|39.95|1|0|39.95|0.00|39.95|2.80|42.75|
+|39.95|3|5|119.85|5.99|113.86|7.97|121.83|
+|39.95|10|15|399.50|59.93|339.57|23.77|363.34|
+
+!2 2. Script Fixture - Preisberechnung
+
+!|script|de.tutorial.fixtures.SimplePriceCalculationFixture|
+|set buchpreis|39.95|
+|set anzahl|5|
+|check|rabattsatz|10%|
+|check|zwischensumme|199.75|
+|check|rabattbetrag|19.98|
+|check|endpreis|179.77|
+
+!2 3. Simple Calculator - Basis-Berechnungen
+
+!|de.tutorial.fixtures.SimpleCalculator|
+|a|b|addPlusEquals?|
+|5|3|8|
+|10|15|25|
+|100|200|300|
+
+!2 4. Versandkosten-Berechnung
+
+!|de.tutorial.fixtures.SimpleShippingCostFixture|
+|orderValue|shippingCost?|
+|15.00|4.95|
+|35.00|2.95|
+|75.00|0.00|
+|150.00|0.00|
+
+!2 5. Preisberechnung mit Mengenrabatt
+
+!|de.tutorial.fixtures.SimplePriceCalculationWithRabattFixture|
+|buchpreis|anzahl|rabattsatz?|endpreis?|
+|29.99|1|0.00|29.99|
+|29.99|3|5.00|85.47|
+|29.99|5|10.00|134.96|
+|29.99|10|15.00|254.92|
+
+!2 Weitere Beispiele
+
+Die vollständige Fixture-Dokumentation mit über 10 verschiedenen Fixture-Typen finden Sie in der Datei:
+`docs/fixture-examples.md`
+
+Diese enthält detaillierte Beispiele für:
+- Column Fixtures
+- Row Fixtures  
+- Setup/Teardown Fixtures
+- Query Fixtures
+- Constraint Fixtures
+- Array Fixtures
+- Und viele mehr...
+
+!2 Test-Ergebnisse
+
+Alle oben gezeigten Fixtures sind implementiert und funktionieren korrekt mit:
+- Slim Test System
+- US-Locale für Dezimalformatierung
+- Spring-Integration wo benötigt

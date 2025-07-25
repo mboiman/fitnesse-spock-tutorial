@@ -1,0 +1,8 @@
+!define TEST_SYSTEM {slim}
+
+!path ${java.class.path}
+!path ../../../../build/classes/java/main
+!path ../../../../build/classes/java/test
+!path ../../../../build/classes/groovy/main
+!path ../../../../build/classes/groovy/test
+!path ../../../../build/libs/*.jar

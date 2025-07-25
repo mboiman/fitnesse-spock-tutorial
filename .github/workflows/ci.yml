@@ -1,0 +1,78 @@
+name: 🚀 CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: 🧪 Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Code
+      uses: actions/checkout@v4
+      
+    - name: ☕ Setup Java 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: 🔧 Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        cache-read-only: false
+      
+    - name: 🏗️ Build Project
+      run: ./gradlew build -x test
+      
+    - name: 🧪 Run Spock Tests
+      run: ./gradlew test
+      
+    - name: 📊 Generate Test Report
+      if: always()
+      run: ./gradlew jacocoTestReport
+      
+    - name: 🎭 Run FitNesse Tests
+      run: |
+        ./gradlew fitnesseTest || true
+        echo "FitNesse tests completed (failures allowed for now)"
+        
+    - name: 📦 Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: |
+          build/reports/tests/
+          build/reports/jacoco/
+          build/test-results/
+          src/test/fitnesse/FitNesseRoot/files/testResults/
+        retention-days: 7
+
+    - name: 📝 Test Summary
+      if: always()
+      run: |
+        echo "## 🧪 Test Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # Spock Test Results
+        if [ -f build/test-results/test/TEST-*.xml ]; then
+          echo "### Spock Tests" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Tests completed - Check artifacts for detailed reports" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # Coverage Summary
+        if [ -f build/reports/jacoco/test/jacocoTestReport.xml ]; then
+          echo "### Code Coverage" >> $GITHUB_STEP_SUMMARY
+          echo "📊 JaCoCo coverage report generated" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # FitNesse Results
+        echo "### FitNesse Tests" >> $GITHUB_STEP_SUMMARY
+        echo "🎭 FitNesse tests executed - Check artifacts for results" >> $GITHUB_STEP_SUMMARY

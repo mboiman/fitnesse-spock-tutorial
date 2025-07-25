@@ -1,0 +1,26 @@
+!1 Demo Test - Einfache Berechnung
+
+Dies ist ein einfacher Test um zu zeigen, dass FitNesse funktioniert.
+
+!define TEST_SYSTEM {slim}
+
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test
+
+!2 Einfache Addition mit Decision Table
+
+!|de.tutorial.fixtures.SimpleCalculator|
+|a|b|addPlusEquals?|
+|2|3|5|
+|10|15|25|
+|100|200|300|
+
+!2 Preisberechnung
+
+!|de.tutorial.fixtures.SimplePriceTable|
+|buchpreis|anzahl|rabattsatz?|zwischensumme?|rabattbetrag?|endpreis?|
+|10.00|1|0%|10.00|0.00|10.00|
+|10.00|3|5%|30.00|1.50|28.50|
+|10.00|5|10%|50.00|5.00|45.00|

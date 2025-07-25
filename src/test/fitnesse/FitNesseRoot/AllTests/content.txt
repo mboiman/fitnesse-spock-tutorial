@@ -1,0 +1,10 @@
+!1 Alle Tests der Online-Buchhandlung
+
+Diese Suite führt alle verfügbaren Tests aus.
+
+!contents -R2 -g -p -f -h
+
+!2 Test-Suite
+
+>PriceCalculations
+>ShippingCosts

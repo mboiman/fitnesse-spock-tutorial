@@ -1,0 +1,43 @@
+!1 Preisberechnungs-Tests
+
+Diese Seite testet die Mengenrabatt-Staffelung unserer Online-Buchhandlung.
+
+!define TEST_SYSTEM {slim}
+
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main
+!path /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test
+
+!2 Geschäftsregeln
+
+* 0-2 Bücher: Kein Rabatt
+* 3-4 Bücher: 5% Rabatt
+* 5-9 Bücher: 10% Rabatt
+* 10+ Bücher: 15% Rabatt
+
+!2 Test mit Script Table
+
+!|script|de.tutorial.fixtures.SimplePriceCalculationFixture|
+|set buchpreis|39.95|
+|set anzahl|1|
+|check|rabattsatz|0%|
+|check|zwischensumme|39.95|
+|check|rabattbetrag|0.00|
+|check|endpreis|39.95|
+
+!2 Test mit Decision Table
+
+!|de.tutorial.fixtures.PriceCalculationDecisionTable|
+|buchpreis|anzahl|rabattsatz?|zwischensumme?|rabattbetrag?|endpreis?|mehrwertsteuer?|gesamtpreisMitMwst?|
+|39.95|1|0%|39.95|0.00|39.95|2.80|42.75|
+|39.95|3|5%|119.85|5.99|113.86|7.97|121.83|
+|39.95|5|10%|199.75|19.98|179.77|12.58|192.35|
+|39.95|10|15%|399.50|59.93|339.57|23.77|363.34|
+
+!2 Test-Ergebnisse
+
+Die Tests zeigen:
+* Rabatte werden korrekt nach Anzahl gestaffelt
+* MwSt wird auf den rabattierten Preis berechnet (7%)
+* Alle Beträge werden auf 2 Dezimalstellen gerundet

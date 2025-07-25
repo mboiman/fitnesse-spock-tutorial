@@ -1,0 +1,37 @@
+!1 FitNesse Test-Suite für Online-Buchhandlung 📚
+
+Willkommen zur FitNesse Test-Suite! Hier finden Sie ausführbare Spezifikationen für unsere Online-Buchhandlung.
+
+!2 Test-Kategorien
+
+!3 Preisberechnungen
+* [[Mengenrabatt-Tests][.PriceCalculations]] - Testet Rabattstaffeln bei Mehrfachbestellungen
+* [[Versandkosten-Tests][.ShippingCosts]] - Prüft die Versandkostenberechnung
+* [[Fixture-Galerie][.FixtureGallery]] - Über 10 verschiedene Fixture-Beispiele
+
+!3 Test-Suiten
+* [[Alle Tests ausführen][.AllTests]] - Führt alle Tests als Suite aus
+* [[Demo Test][.DemoTest]] - Einfacher Demo-Test
+
+!3 Weitere Tests (noch nicht implementiert)
+* MwSt-Berechnungen - Validiert Mehrwertsteuer-Berechnungen
+* Bestellvorgang - End-to-End Test des Bestellprozesses
+* Warenkorb-Verwaltung - Warenkorb-Funktionalitäten
+* ISBN-Validierung - Prüft gültige ISBN-Formate
+* Preisvalidierung - Testet Preisgrenzen
+
+!2 Schnellstart
+
+1. Tests ausführen: Klicken Sie auf einen Test-Link oben
+2. Suite ausführen: [[Alle Tests ausführen][>SuiteAll]]
+3. Neue Tests erstellen: "Add" → "Test" im Menü
+
+!2 Test-Konventionen
+
+* Alle Preise in EUR
+* Rabatte in Prozent
+* MwSt für Bücher: 7%
+
+!2 Kontakt
+
+Bei Fragen wenden Sie sich an das Test-Team: test@bookstore.de
