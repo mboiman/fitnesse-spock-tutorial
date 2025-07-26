@@ -1,28 +1,38 @@
 # Architecture Guide 🏗️
 
-Dieses Dokument beschreibt die Architektur und das Design der FitNesse-Spock Tutorial-Anwendung.
+**Verstehen Sie das moderne Test-Framework Design mit CI/CD und Live-Reports**
 
-## 🎯 Überblick
+Dieses Dokument erklärt die Architektur der **FitNesse-Spock Tutorial-Anwendung** mit Fokus auf professionelle Test-Integration und automatisierte Deployment-Pipeline.
 
-Das Projekt demonstriert die Integration zweier Test-Frameworks in einer Spring Boot Anwendung:
+## 🎯 System-Überblick
+
+Ein **Dual-Framework Test-System** mit automatischer CI/CD Pipeline und GitHub Pages Integration:
 
 ```mermaid
 graph TB
-    subgraph "Test Layer"
-        FT[FitNesse Tests<br/>Business Acceptance]
-        ST[Spock Tests<br/>Developer BDD]
+    subgraph "🔄 CI/CD Pipeline"
+        GHA[GitHub Actions<br/>Build & Test]
+        GHP[GitHub Pages<br/>Live Reports]
     end
     
-    subgraph "Application Layer"
-        API[REST Controllers]
-        SVC[Business Services]
-        REPO[Repositories]
+    subgraph "🧪 Test Layer"
+        FT[FitNesse Tests<br/>🎭 Business Acceptance]
+        ST[Spock Tests<br/>🔬 Developer BDD]
+        FV[FitNesse Viewer<br/>📊 XML → HTML]
     end
     
-    subgraph "Data Layer"
-        H2[(H2 Database<br/>In-Memory)]
+    subgraph "📱 Application Layer"
+        API[REST Controllers<br/>📡 HTTP Endpoints]
+        SVC[Business Services<br/>⚙️ Core Logic]
+        REPO[Repositories<br/>💾 Data Access]
     end
     
+    subgraph "💽 Data Layer"
+        H2[(H2 Database<br/>🗄️ In-Memory)]
+    end
+    
+    GHA --> GHP
+    FT --> FV
     FT --> API
     ST --> SVC
     ST --> API
@@ -30,8 +40,11 @@ graph TB
     SVC --> REPO
     REPO --> H2
     
+    style GHA fill:#2ea043
+    style GHP fill:#1f6feb
     style FT fill:#e1f5fe
     style ST fill:#f3e5f5
+    style FV fill:#fff3cd
     style API fill:#fff3e0
     style SVC fill:#e8f5e9
     style REPO fill:#fce4ec
@@ -44,38 +57,144 @@ graph TB
 
 **FitNesse und Spock sind vollständig voneinander getrennte Test-Frameworks:**
 
-- **KEINE Verbindung zwischen den Frameworks**: FitNesse Fixtures rufen niemals Spock Tests auf
-- **Unabhängige Testausführung**: Beide Frameworks können separat und unabhängig voneinander laufen
-- **Gemeinsamer Zugriff auf Services**: Beide testen dieselben Spring Services, aber auf unterschiedliche Weise
+- ❌ **KEINE Verbindung**: FitNesse Fixtures rufen niemals Spock Tests auf
+- ✅ **Unabhängige Ausführung**: Beide Frameworks laufen separat und parallel
+- 🔄 **Gemeinsame Services**: Beide testen dieselben Spring Services, aber unterschiedlich
+- 📊 **Separate Reports**: Jedes Framework generiert eigene Test-Ergebnisse
+
+```
+📊 Test-Pyramid Architektur:
+┌─────────────────────────────────┐
+│        🎭 FitNesse              │ ← Business Acceptance Tests
+│     (Stakeholder Tests)         │   
+├─────────────────────────────────┤
+│        🔬 Spock Integration     │ ← API & Service Integration  
+├─────────────────────────────────┤
+│        🔬 Spock Unit Tests      │ ← Logic & Component Tests
+└─────────────────────────────────┘
+           ⬇️ Both test ⬇️
+        📱 Spring Boot Services
+```
 
 Diese Trennung ist bewusstes Design und folgt der Test-Pyramide:
 - **Spock**: Unit/Integration Tests (Basis der Pyramide) - viele schnelle Tests
 - **FitNesse**: Acceptance Tests (Spitze der Pyramide) - wenige umfassende Tests
 
+## 🚀 CI/CD Pipeline Architektur
+
+### GitHub Actions Workflow
+
+```mermaid
+graph LR
+    subgraph "🔄 CI/CD Pipeline"
+        A[📝 Code Push] --> B[⚙️ GitHub Actions]
+        B --> C[🏗️ Build & Test]
+        C --> D[📊 Generate Reports]
+        D --> E[🎭 FitNesse Viewer]
+        E --> F[📄 GitHub Pages]
+    end
+    
+    subgraph "📊 Test Execution"
+        G[🔬 Spock Tests<br/>39/39 ✅]
+        H[🎭 FitNesse Tests<br/>XML Results]
+        I[📈 JaCoCo Coverage<br/>89% ✅]
+    end
+    
+    C --> G
+    C --> H  
+    C --> I
+    G --> D
+    H --> D
+    I --> D
+    
+    style A fill:#f9f9f9
+    style B fill:#2ea043
+    style F fill:#1f6feb
+    style G fill:#f3e5f5
+    style H fill:#e1f5fe
+    style I fill:#fff3e0
+```
+
+### 🔧 Pipeline Komponenten
+
+| Komponente | Funktion | Output | Live URL |
+|------------|----------|--------|----------|
+| **GitHub Actions** | Automatische Builds | CI/CD Status | [Actions Tab](https://github.com/mboiman/fitnesse-spock-tutorial/actions) |
+| **Spock Tests** | Unit/Integration Tests | HTML Reports | [📊 Spock Reports](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **FitNesse Tests** | Acceptance Tests | XML → HTML Viewer | [🎭 FitNesse Results](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html) |
+| **JaCoCo Coverage** | Code Coverage Analysis | Coverage Reports | [📈 Coverage Report](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **GitHub Pages** | Static Site Hosting | Live Dashboard | [🌐 Live Demo](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+
+### 🎭 FitNesse Viewer Innovation
+
+**Problem**: FitNesse generiert XML-Dateien, die im Browser nicht schön aussehen.
+
+**Lösung**: Custom JavaScript-basierter XML-Viewer:
+
+```
+FitNesse XML Results → JavaScript Parser → Beautiful HTML Display
+├── Test Statistics (Right/Wrong/Ignored/Exceptions)
+├── Color-coded Status (✅ Pass / ❌ Fail)
+├── Timestamp Information
+└── Formatted Test Tables
+```
+
+**Features**:
+- 📊 **Visual Test Statistics** mit Badges
+- ✅ **Pass/Fail Indicators** für schnelle Übersicht  
+- 📅 **Timestamp Parsing** aus Dateinamen
+- 🎨 **Responsive Design** für alle Geräte
+- 📱 **Mobile-friendly** Interface
+
+## 🔄 Workflow Automation
+
+### Deployment Pipeline
+
+```mermaid
+sequenceDiagram
+    participant Dev as 👨‍💻 Developer
+    participant GH as 📁 GitHub
+    participant GA as ⚙️ Actions
+    participant GP as 📄 Pages
+    participant User as 👤 User
+    
+    Dev->>GH: 🔄 git push
+    GH->>GA: 🚀 Trigger Workflow
+    GA->>GA: 🏗️ Build Project
+    GA->>GA: 🧪 Run Spock Tests (39/39)
+    GA->>GA: 🎭 Run FitNesse Tests  
+    GA->>GA: 📊 Generate Reports
+    GA->>GA: 🎨 Create FitNesse Viewer
+    GA->>GP: 📤 Deploy to Pages
+    GP-->>User: 🌐 Live Test Reports
+    
+    Note over GA: 3-5 Minutes Fully Automated
+    Note over GP: Available at: mboiman.github.io/...
+```
+
 ### Datenfluss zwischen Frameworks
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant FitNesse
-    participant Fixture
-    participant SpringService
-    participant SpockTest
-    participant Database
+    participant FT as 🎭 FitNesse
+    participant FX as 🔧 Fixture  
+    participant SVC as ⚙️ Service
+    participant ST as 🔬 Spock
+    participant DB as 💾 Database
     
-    User->>FitNesse: Führt Wiki-Test aus
-    FitNesse->>Fixture: Ruft Fixture-Methode
-    Fixture->>SpringService: Verwendet Service
-    SpringService->>Database: Datenzugriff
-    Database-->>SpringService: Daten
-    SpringService-->>Fixture: Ergebnis
-    Fixture-->>FitNesse: Formatiertes Ergebnis
-    FitNesse-->>User: Test-Report
+    FT->>FX: Wiki-Test ausführen
+    FX->>SVC: Service aufrufen
+    SVC->>DB: Daten abrufen
+    DB-->>SVC: Ergebnis
+    SVC-->>FX: Business-Logik
+    FX-->>FT: ✅/❌ Test-Ergebnis
     
-    Note over SpockTest: Unabhängig davon (KEINE Verbindung!)
-    SpockTest->>SpringService: Testet gleichen Service
-    SpringService->>Database: Datenzugriff
-    Database-->>SpockTest: Mock/Real Data
+    Note over ST: ⚡ Parallel & Unabhängig
+    ST->>SVC: Gleichen Service testen
+    SVC->>DB: Mock/Real Daten
+    DB-->>ST: Test-Daten
+    
+    Note over FT,ST: Beide testen DIESELBEN Services!
 ```
 
 ## 📦 Komponenten-Architektur

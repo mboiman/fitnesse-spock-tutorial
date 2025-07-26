@@ -1,13 +1,24 @@
 # Getting Started Guide 🚀
 
-Dieses Tutorial führt Sie durch die Installation und ersten Schritte mit dem FitNesse & Spock Test-Framework.
+**Der einfachste Weg, um mit professionellem Testing zu starten!**
+
+Dieses Tutorial führt Sie in **5 Minuten** von Null zu laufenden Tests mit automatischem CI/CD und Live-Reports.
+
+## 🎯 Was Sie lernen werden
+
+- ✅ **Spock Tests** schreiben und verstehen
+- ✅ **FitNesse Tests** für Business-Akzeptanz
+- ✅ **CI/CD Pipeline** mit GitHub Actions
+- ✅ **Live Test Reports** auf GitHub Pages
 
 ## 📋 Voraussetzungen
 
-- **Java 17+** (empfohlen: OpenJDK 17)
-- **Git** für Versionskontrolle
-- **IDE** mit Groovy-Support (IntelliJ IDEA empfohlen)
-- **Browser** für FitNesse Wiki-Interface
+| Tool | Version | Zweck | Installation |
+|------|---------|-------|--------------|
+| **Java** | 17+ | Runtime | [adoptium.net](https://adoptium.net/) |
+| **Git** | Latest | Versionskontrolle | [git-scm.com](https://git-scm.com/) |
+| **IDE** | Optional | Development | IntelliJ IDEA empfohlen |
+| **Browser** | Aktuell | FitNesse UI & Reports | Chrome/Firefox/Safari |
 
 ## 🔧 Installation
 
@@ -32,54 +43,67 @@ export PATH="$JAVA_HOME/bin:$PATH"
 2. Setze `JAVA_HOME` in den Systemvariablen
 3. Füge `%JAVA_HOME%\bin` zum PATH hinzu
 
-### 2. Projekt klonen
+### 2. ⚡ 5-Minuten Schnellstart
 
 ```bash
-git clone https://github.com/your-org/fitnesse-spock-tutorial.git
+# Repository klonen
+git clone https://github.com/mboiman/fitnesse-spock-tutorial.git
 cd fitnesse-spock-tutorial
+
+# Alles bauen und testen (5 Min)
+./gradlew build test
+
+# 🎉 Fertig! Tests sind gelaufen
 ```
 
-### 3. Projekt bauen
+**Das war's!** Sie haben gerade:
+- ✅ 39 Spock Tests ausgeführt
+- ✅ JaCoCo Coverage Report generiert  
+- ✅ Spring Boot App getestet
+- ✅ Build erfolgreich abgeschlossen
+
+### 3. 📊 Live Demo anschauen
+
+**[🌐 Test Reports Dashboard](https://mboiman.github.io/fitnesse-spock-tutorial/)**
+
+Schauen Sie sich die automatisch generierten Test-Reports an:
+- 📊 **Spock Test Results** - Unit/Integration Tests
+- 🎭 **FitNesse Results** - Acceptance Tests mit schönem Viewer  
+- 📈 **Coverage Reports** - Code-Abdeckung mit JaCoCo
+
+## 🧪 Tests lokal ausführen
+
+### 🔬 Spock Tests (Entwickler-Tests)
 
 ```bash
-# Gradle Wrapper macht die Installation von Gradle überflüssig
-./gradlew build
-
-# Auf Windows:
-gradlew.bat build
-```
-
-## 🧪 Erste Tests ausführen
-
-### Spock Tests (Unit & Integration)
-
-```bash
-# Alle Tests ausführen
-./gradlew test
-
-# Nur Unit Tests
-./gradlew test --tests "*Spec"
-
-# Nur Integration Tests  
-./gradlew test --tests "*IntegrationSpec"
-
-# Mit Test-Report
+# 📊 Alle Tests + Coverage Report
 ./gradlew test jacocoTestReport
-# Report: build/reports/tests/test/index.html
+
+# 🎯 Spezifische Tests
+./gradlew test --tests "*BookServiceSpec"     # Ein Test
+./gradlew test --tests "*Spec"               # Alle Unit Tests
+./gradlew test --tests "*IntegrationSpec"    # Alle Integration Tests
+
+# 📈 Reports anschauen
+open build/reports/tests/test/index.html     # Test Results
+open build/reports/jacoco/test/html/index.html # Coverage
 ```
 
-### FitNesse Tests (Acceptance)
+### 🎭 FitNesse Tests (Business-Tests)
 
 ```bash
-# FitNesse Server starten
+# 🚀 FitNesse Server starten
 ./gradlew fitnesseStart
 
-# Browser öffnen
+# 🌐 Im Browser öffnen
 open http://localhost:9090
 
-# Oder direkt zu den Tests:
-open http://localhost:9090/BookstoreTests
+# 📋 Direkt zu den Tests:
+open http://localhost:9090/BookstoreTests    # Alle Tests
+open http://localhost:9090/PriceCalculations # Preis-Tests
 ```
+
+**💡 Tipp**: FitNesse läuft als Wiki-Server. Sie können Tests im Browser bearbeiten und ausführen!
 
 ## 🏗️ Projekt-Struktur
 
@@ -111,12 +135,13 @@ fitnesse-spock-tutorial/
 └── docs/                  # Dokumentation
 ```
 
-## 🎯 Nächste Schritte
+## 🎓 Von Neuling zum Profi - Lernpfad
 
-### 1. Einen einfachen Spock Test verstehen
+### 🟢 Level 1: Verstehen (15 Min)
 
+**1. Spock Test verstehen**
 ```groovy
-// src/test/groovy/de/tutorial/bookstore/service/BookServiceSpec.groovy
+// src/test/groovy/.../BookServiceSpec.groovy
 class BookServiceSpec extends Specification {
     
     def "sollte Bücher nach Titel finden"() {
@@ -133,8 +158,7 @@ class BookServiceSpec extends Specification {
 }
 ```
 
-### 2. Einen FitNesse Test verstehen
-
+**2. FitNesse Test verstehen**
 ```
 !|de.tutorial.fixtures.BookSearchFixture|
 |suchbegriff|anzahl gefundene bücher?|
@@ -143,33 +167,57 @@ class BookServiceSpec extends Specification {
 |Cobol      |0                       |
 ```
 
-### 3. Die Beispiel-Anwendung erkunden
+### 🟡 Level 2: Anwenden (30 Min)
 
-Die Beispiel-Anwendung ist eine Online-Buchhandlung mit:
-- REST API für Bücherverwaltung
-- Preisberechnung mit Mengenrabatten
-- Versandkostenberechnung
-- Bestellverwaltung
+**3. Beispiel-App erkunden**
+Die Online-Buchhandlung bietet:
+- 📚 **Bücherverwaltung** via REST API
+- 💰 **Preisberechnung** mit Mengenrabatten  
+- 🚚 **Versandkosten** nach Gewicht/Land
+- 🛒 **Bestellprozess** End-to-End
 
-### 4. Eigene Tests schreiben
+**4. Tests ausführen & Reports verstehen**
+- 📊 **Spock Reports**: Welche Tests pass/fail?
+- 🎭 **FitNesse Viewer**: Business-Test Ergebnisse
+- 📈 **Coverage**: Welcher Code ist getestet?
 
-1. **Spock Test hinzufügen**: Erstelle eine neue `*Spec.groovy` Datei
-2. **FitNesse Test hinzufügen**: Erstelle eine neue Wiki-Seite im Browser
-3. **Fixture implementieren**: Erstelle eine Java-Klasse im fixtures Package
+### 🔴 Level 3: Meistern (60 Min)
 
-## 📚 Weiterführende Dokumentation
+**5. Eigene Tests schreiben**
+1. **Spock Test**: Neue `*Spec.groovy` Datei erstellen
+2. **FitNesse Test**: Neue Wiki-Seite im Browser erstellen  
+3. **Fixture**: Java-Klasse im `fixtures` Package implementieren
 
-- [Architecture Guide](architecture.md) - Verstehen Sie die Systemarchitektur
-- [Testing Guide](testing-guide.md) - Detaillierte Test-Framework Anleitungen
-- [Best Practices](best-practices.md) - Professionelle Patterns und Tipps
+**6. CI/CD verstehen**
+- ⚙️ **GitHub Actions**: Wie funktioniert die Pipeline?
+- 📊 **Auto-Deploy**: Wie kommen Reports auf GitHub Pages?
+- 🔄 **Workflow**: Push → Build → Test → Deploy
 
-## ❓ Hilfe & Support
+## 🚀 Was als Nächstes?
 
-Bei Problemen:
-1. Konsultieren Sie [Troubleshooting](troubleshooting.md)
-2. Prüfen Sie die [FAQ](troubleshooting.md#faq)
-3. Erstellen Sie ein GitHub Issue
+### 👨‍💻 Für Entwickler
+- 🏗️ **[Architecture Guide](architecture.md)** - System-Design verstehen
+- 🧪 **[Testing Guide](testing-guide.md)** - Detaillierte Test-Anleitungen  
+- ⭐ **[Best Practices](best-practices.md)** - Professionelle Patterns
+
+### 🏢 Für Teams
+- 📋 **Repository forken** als Template nutzen
+- ⚙️ **CI/CD Pipeline** automatisch übernehmen
+- 📊 **GitHub Pages** für eigene Test-Reports aktivieren
+
+### 🆘 Probleme?
+1. 🔧 **[Troubleshooting](troubleshooting.md)** - Häufige Probleme lösen
+2. 📝 **[GitHub Issues](https://github.com/mboiman/fitnesse-spock-tutorial/issues)** - Bug Reports
+3. 💬 **[Discussions](https://github.com/mboiman/fitnesse-spock-tutorial/discussions)** - Fragen stellen
+
+## 🌟 Success Stories
+
+**Was andere mit diesem Tutorial erreicht haben:**
+- ✅ **Moderne Test-Architektur** in Legacy-Projekten eingeführt
+- ✅ **Acceptance Testing** für Business-Stakeholder etabliert  
+- ✅ **CI/CD Pipeline** mit automatischen Test-Reports aufgebaut
+- ✅ **Test-driven Development** im Team implementiert
 
 ---
 
-**Tipp**: Beginnen Sie mit dem Ausführen der existierenden Tests, bevor Sie eigene schreiben!
+**🎯 Tipp für Neulinge**: Starten Sie mit dem 5-Minuten Schnellstart, schauen Sie sich die Live-Demo an, und arbeiten Sie dann den Lernpfad durch. So verstehen Sie das System am schnellsten!

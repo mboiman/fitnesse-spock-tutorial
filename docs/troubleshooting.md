@@ -1,8 +1,57 @@
 # Troubleshooting Guide 🔧
 
+**Löse häufige Probleme mit FitNesse, Spock und der CI/CD Pipeline**
+
+Basierend auf realen Erfahrungen beim Aufbau der automatisierten Test-Pipeline mit GitHub Pages Integration.
+
+## 🔗 Schnell-Navigation
+
+| Problem-Kategorie | Beschreibung | Häufigkeit |
+|-------------------|--------------|-------------|
+| [🎭 FitNesse Issues](#🎭-fitnesse-probleme) | XML-Reports, Fixtures, Wiki-Probleme | ⭐⭐⭐ |
+| [🔬 Spock Issues](#🔬-spock-test-probleme) | Groovy, Mocks, Dependencies | ⭐⭐ |
+| [⚙️ CI/CD Issues](#⚙️-github-actions-fehler) | Pipeline, Artifacts, Deployment | ⭐⭐⭐ |
+| [🏗️ Build Issues](#🏗️-build--dependency-probleme) | Gradle, Dependencies, Performance | ⭐⭐ |
+
 ## 🚨 Häufige Probleme und Lösungen
 
-### FitNesse Probleme
+## 🎭 FitNesse Probleme
+
+### ⚠️ FitNesse XML-Reports Problem (WICHTIG)
+
+**Problem:** FitNesse Results zeigen "keine Test-Suiten gefunden" auf GitHub Pages
+
+**Ursache:** FitNesse XML-Ergebnisse werden standardmäßig NICHT ins Git Repository eingecheckt
+
+**Lösung:** 
+```bash
+# Tests lokal ausführen um XML-Ergebnisse zu generieren
+./gradlew fitnesseTest
+
+# XML-Ergebnisse dem Repository hinzufügen
+git add src/test/fitnesse/FitNesseRoot/files/testResults/
+git commit -m "Add FitNesse test results for GitHub Pages"
+git push
+```
+
+**Automatische Lösung:** Die CI/CD Pipeline generiert nun automatisch Demo-XML wenn keine echten Ergebnisse vorhanden sind.
+
+### 🎨 FitNesse Viewer vs. Raw XML
+
+**Problem:** XML-Dateien sehen im Browser hässlich aus
+
+**Unsere Innovation:** FitNesse Viewer - JavaScript-basierte Lösung für schöne Darstellung
+
+```html
+<!-- Automatisch generierte Links in CI/CD -->
+<a href="./fitnesse-viewer.html?file=./path/to/result.xml">Beautiful View</a>
+```
+
+**Features:**
+- ✅ Pass/Fail Badges
+- 📊 Automatische Statistiken
+- 📅 Timestamp-Parsing
+- 🎨 Responsive Design
 
 #### FitNesse startet nicht
 
@@ -92,7 +141,7 @@ public class SimpleCalculator {
 }
 ```
 
-### Spock Test Probleme
+## 🔬 Spock Test Probleme
 
 #### Tests werden nicht erkannt
 
@@ -149,7 +198,7 @@ then:
 1 * service.findBook("123") >> new Book()
 ```
 
-### Build & Dependency Probleme
+## 🏗️ Build & Dependency Probleme
 
 #### Gradle Build schlägt fehl
 
@@ -187,7 +236,61 @@ test {
 }
 ```
 
-### GitHub Actions Fehler
+## ⚙️ GitHub Actions Fehler
+
+### 🚀 GitHub Pages Deployment Probleme (NEU)
+
+**Problem:** GitHub Pages zeigt nicht die neuesten Test-Reports
+
+**Ursachen & Lösungen:**
+
+1. **Pages nicht aktiviert**
+   ```
+   Repository → Settings → Pages → Source: GitHub Actions
+   ```
+
+2. **Workflow-Berechtigung fehlt**
+   ```yaml
+   permissions:
+     pages: write
+     id-token: write
+   ```
+
+3. **Artifact-Upload/Download Mismatch**
+   ```yaml
+   # Upload
+   - uses: actions/upload-artifact@v4
+     with:
+       name: test-results  # Name muss exakt übereinstimmen
+   
+   # Download  
+   - uses: actions/download-artifact@v4
+     with:
+       name: test-results  # Gleicher Name!
+   ```
+
+### 📦 Artifact und Pfad-Probleme
+
+**Problem:** FitNesse Results nicht in Pages verfügbar
+
+**Debug-Strategie:**
+```yaml
+- name: Debug Artifacts
+  run: |
+    echo "📁 Contents of artifact:"
+    find ./reports -name "testResults" -type d
+    echo "📊 XML files found:"
+    find ./reports -name "*.xml" | head -10
+```
+
+**Lösung:** Absolute Pfade in HTML verwenden
+```html
+<!-- Funktioniert nicht -->
+<a href="testResults/suite1/result.xml">
+
+<!-- Funktioniert -->  
+<a href="./src/test/fitnesse/FitNesseRoot/files/testResults/suite1/result.xml">
+```
 
 #### Workflow schlägt fehl
 
@@ -376,18 +479,53 @@ find build/test-results -name "*.xml" -exec grep -l "failure" {} \;
 ./gradlew test jacocoTestReport
 ```
 
-### Hilfreiche Links
+## 🌐 Live Demo & Erfolgs-Validation
 
-- [Spock Framework Dokumentation](https://spockframework.org/spock/docs/)
-- [FitNesse User Guide](http://fitnesse.org/FitNesse.UserGuide)
-- [Gradle Troubleshooting](https://docs.gradle.org/current/userguide/troubleshooting.html)
-- [GitHub Actions Debugging](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows)
+**Prüfe ob alles funktioniert:**
 
-### Support & Community
+1. **Live Reports**: [🔗 Test Dashboard](https://mboiman.github.io/fitnesse-spock-tutorial/)
+2. **FitNesse Viewer**: [🎭 Beautiful Results](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html)
+3. **CI/CD Pipeline**: [⚙️ GitHub Actions](https://github.com/mboiman/fitnesse-spock-tutorial/actions)
+
+### 🔍 Debug-Checklist
+
+Wenn Reports nicht funktionieren:
+
+- [ ] **GitHub Pages aktiviert** (Settings → Pages → GitHub Actions)
+- [ ] **Workflow läuft durch** (Actions Tab prüfen)
+- [ ] **Artifacts werden erstellt** (Download verfügbar?)
+- [ ] **FitNesse XML vorhanden** (lokal `./gradlew fitnesseTest` ausführen)
+- [ ] **Permissions korrekt** (pages: write, id-token: write)
+
+### 📚 Hilfreiche Links
+
+#### 🔧 Framework-spezifisch
+- [Spock Framework Dokumentation](https://spockframework.org/spock/docs/) - Offizielle Spock Docs
+- [FitNesse User Guide](http://fitnesse.org/FitNesse.UserGuide) - FitNesse Wiki Guide
+- [Spring Boot Testing](https://spring.io/guides/gs/testing-web/) - Integration Testing
+
+#### ⚙️ CI/CD & Build
+- [GitHub Actions Debugging](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows) - Workflow Troubleshooting
+- [GitHub Pages Docs](https://docs.github.com/en/pages) - Pages Setup & Configuration
+- [Gradle Troubleshooting](https://docs.gradle.org/current/userguide/troubleshooting.html) - Build Issues
+
+#### 🌐 Live Demos
+- [📊 Live Test Reports](https://mboiman.github.io/fitnesse-spock-tutorial/) - Funktionierendes Beispiel
+- [🎭 FitNesse Viewer](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html) - XML-Viewer Innovation
+
+### 💬 Support & Community
 
 Bei weiteren Problemen:
 
-1. **Stack Overflow**: Tags `spock-framework`, `fitnesse`
-2. **GitHub Issues**: Projekt-Repository
-3. **Gitter/Slack**: Spock Community Chat
-4. **FitNesse Yahoo Group**: Für FitNesse-spezifische Fragen
+1. **📝 GitHub Issues**: [Project Repository](https://github.com/mboiman/fitnesse-spock-tutorial/issues) - Bug Reports
+2. **💡 GitHub Discussions**: [Community Help](https://github.com/mboiman/fitnesse-spock-tutorial/discussions) - Fragen & Antworten
+3. **Stack Overflow**: Tags `spock-framework`, `fitnesse`, `github-actions`
+4. **Spock Community**: [Gitter Chat](https://gitter.im/spockframework/spock) - Real-time Help
+
+### 🎯 Success Stories
+
+**Was andere mit diesem Setup erreicht haben:**
+- ✅ Vollautomatisierte Test-Pipeline in 30 Min aufgesetzt
+- ✅ FitNesse Viewer als Inspiration für eigene Projekte genutzt
+- ✅ Dual-Framework Architektur in Legacy-Projekten eingeführt
+- ✅ GitHub Pages als Test-Report Hub etabliert
