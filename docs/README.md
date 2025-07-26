@@ -99,6 +99,14 @@ graph TD
 | **Geschwindigkeit** | Sehr schnell | Mittel |
 | **Lernkurve** | Mittel | Niedrig-Mittel |
 
+## 🌐 Live Demo & Reports
+
+**[🔗 Test Reports Dashboard](https://mboiman.github.io/fitnesse-spock-tutorial/)**
+
+- 📊 [Spock Test Results](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/tests/test/index.html) - Unit/Integration Tests
+- 🎭 [FitNesse Results](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html) - Acceptance Tests mit Viewer
+- 📈 [Coverage Reports](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/jacoco/test/html/index.html) - JaCoCo Analyse
+
 ## 🔗 Externe Ressourcen
 
 - [Spock Framework Official Docs](https://spockframework.org/)

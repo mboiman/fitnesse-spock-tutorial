@@ -120,9 +120,9 @@ graph LR
 | Komponente | Funktion | Output | Live URL |
 |------------|----------|--------|----------|
 | **GitHub Actions** | Automatische Builds | CI/CD Status | [Actions Tab](https://github.com/mboiman/fitnesse-spock-tutorial/actions) |
-| **Spock Tests** | Unit/Integration Tests | HTML Reports | [📊 Spock Reports](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **Spock Tests** | Unit/Integration Tests | HTML Reports | [📊 Spock Reports](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/tests/test/index.html) |
 | **FitNesse Tests** | Acceptance Tests | XML → HTML Viewer | [🎭 FitNesse Results](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html) |
-| **JaCoCo Coverage** | Code Coverage Analysis | Coverage Reports | [📈 Coverage Report](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **JaCoCo Coverage** | Code Coverage Analysis | Coverage Reports | [📈 Coverage Report](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/jacoco/test/html/index.html) |
 | **GitHub Pages** | Static Site Hosting | Live Dashboard | [🌐 Live Demo](https://mboiman.github.io/fitnesse-spock-tutorial/) |
 
 ### 🎭 FitNesse Viewer Innovation

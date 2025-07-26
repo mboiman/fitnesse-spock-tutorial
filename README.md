@@ -40,16 +40,16 @@ cd fitnesse-spock-tutorial
 
 | Framework | Tests | Status | Live Report |
 |-----------|-------|--------|-------------|
-| **Spock** | 39/39 | ✅ Passing | [📊 Spock Reports](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **Spock** | 39/39 | ✅ Passing | [📊 Spock Reports](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/tests/test/index.html) |
 | **FitNesse** | 72/72 | ✅ Passing | [🎭 FitNesse Results](https://mboiman.github.io/fitnesse-spock-tutorial/fitnesse-results.html) |
-| **Coverage** | 89% | ✅ Good | [📈 Coverage Report](https://mboiman.github.io/fitnesse-spock-tutorial/) |
+| **Coverage** | 89% | ✅ Good | [📈 Coverage Report](https://mboiman.github.io/fitnesse-spock-tutorial/build/reports/jacoco/test/html/index.html) |
 
 ## 🎓 Lernpfad für Neulinge
 
 ### Für Einsteiger (5 Min)
-1. 🚀 **[Schnellstart](#🚀-schnellstart-für-neulinge)** - Projekt zum Laufen bringen
-2. 🌐 **[Live Demo](#🌐-live-demo)** - Test-Reports anschauen
-3. 🏗️ **[Architektur verstehen](#⚠️-wichtige-architektur-info)**
+1. 🚀 **[Schnellstart](#-schnellstart-für-neulinge)** - Projekt zum Laufen bringen
+2. 🌐 **[Live Demo](#-live-demo)** - Test-Reports anschauen
+3. 🏗️ **[Architektur verstehen](#-wichtige-architektur-info)**
 
 ### Für Entwickler (15 Min)
 4. 🧪 **[Testing Guide](docs/testing-guide.md)** - Wie die Tests funktionieren
@@ -112,7 +112,7 @@ cd fitnesse-spock-tutorial
 ## 🚀 Nächste Schritte
 
 ### Als Neuling starten?
-1. **[▶️ Schnellstart befolgen](#🚀-schnellstart-für-neulinge)** - 5 Minuten Setup
+1. **[▶️ Schnellstart befolgen](#-schnellstart-für-neulinge)** - 5 Minuten Setup
 2. **[🌐 Live Demo anschauen](https://mboiman.github.io/fitnesse-spock-tutorial/)** - Sehe Ergebnisse
 3. **[📖 Testing Guide lesen](docs/testing-guide.md)** - Verstehe die Tests
 
