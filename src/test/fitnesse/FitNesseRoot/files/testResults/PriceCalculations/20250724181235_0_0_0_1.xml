@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20250223</FitNesseVersion>
+  <rootPath>PriceCalculations</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>18</exceptions>
+    </counts>
+    <date>2025-07-24T18:12:35+02:00</date>
+    <runTimeInMillis>196</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="SetUp"&gt;.SetUp&lt;/a&gt; &lt;a href="SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/groovy/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/groovy/test&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="0"&gt;Preisberechnungs-Tests&lt;/h1&gt;
+&lt;br/&gt;Diese Seite testet die Mengenrabatt-Staffelung unserer Online-Buchhandlung.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/groovy/main  &lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/groovy/test&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Geschäftsregeln&lt;/h2&gt;
+&lt;br/&gt;* 0-2 Bücher: Kein Rabatt&lt;br/&gt;* 3-4 Bücher: 5% Rabatt&lt;br/&gt;* 5-9 Bücher: 10% Rabatt&lt;br/&gt;* 10+ Bücher: 15% Rabatt&lt;br/&gt;&lt;br/&gt;&lt;h2 id="2"&gt;Test-Tabelle: Mengenrabatte&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;de.tutorial.fixtures.SimplePriceCalculationFixture &lt;span class="error"&gt;Could not find class de.tutorial.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;set buchpreis &lt;span class="error"&gt;The instance scriptTableActor.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;39.95&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set anzahl &lt;span class="error"&gt;The instance scriptTableActor.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;rabattsatz&lt;/td&gt;
+		&lt;td&gt;0% &lt;span class="error"&gt;The instance scriptTableActor.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;zwischensumme&lt;/td&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance scriptTableActor.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;rabattbetrag&lt;/td&gt;
+		&lt;td&gt;0.00 &lt;span class="error"&gt;The instance scriptTableActor.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;endpreis&lt;/td&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance scriptTableActor.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;mehrwertsteuer&lt;/td&gt;
+		&lt;td&gt;2.80 &lt;span class="error"&gt;The instance scriptTableActor.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;gesamtpreis mit mwst&lt;/td&gt;
+		&lt;td&gt;42.75 &lt;span class="error"&gt;The instance scriptTableActor.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;de.tutorial.fixtures.SimplePriceCalculationFixture &lt;span class="error"&gt;Could not find class de.tutorial.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;set buchpreis &lt;span class="error"&gt;The instance scriptTableActor.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;39.95&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set anzahl &lt;span class="error"&gt;The instance scriptTableActor.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;rabattsatz&lt;/td&gt;
+		&lt;td&gt;5% &lt;span class="error"&gt;The instance scriptTableActor.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;zwischensumme&lt;/td&gt;
+		&lt;td&gt;119.85 &lt;span class="error"&gt;The instance scriptTableActor.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;rabattbetrag&lt;/td&gt;
+		&lt;td&gt;5.99 &lt;span class="error"&gt;The instance scriptTableActor.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;endpreis&lt;/td&gt;
+		&lt;td&gt;113.86 &lt;span class="error"&gt;The instance scriptTableActor.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;mehrwertsteuer&lt;/td&gt;
+		&lt;td&gt;7.97 &lt;span class="error"&gt;The instance scriptTableActor.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;gesamtpreis mit mwst&lt;/td&gt;
+		&lt;td&gt;121.83 &lt;span class="error"&gt;The instance scriptTableActor.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Test-Ergebnisse&lt;/h2&gt;
+&lt;br/&gt;Die Tests zeigen:&lt;br/&gt;* Rabatte werden korrekt nach Anzahl gestaffelt&lt;br/&gt;* MwSt&lt;a title="create page" href="MwSt?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt; wird auf den rabattierten Preis berechnet (7%)&lt;br/&gt;* Alle Beträge werden auf 2 Dezimalstellen gerundet&lt;br/&gt;</content>
+    <relativePageName>PriceCalculations</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='de.tutorial.fixtures.SimplePriceCalculationFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not find class de.tutorial.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='setAnzahl', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_3', instruction='call', instanceName='scriptTableActor', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_3</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_4', instruction='call', instanceName='scriptTableActor', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_4</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_5', instruction='call', instanceName='scriptTableActor', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_5</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_6', instruction='call', instanceName='scriptTableActor', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_6</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_7', instruction='call', instanceName='scriptTableActor', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_7</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_8', instruction='call', instanceName='scriptTableActor', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_8</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='de.tutorial.fixtures.SimplePriceCalculationFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not find class de.tutorial.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_2', instruction='call', instanceName='scriptTableActor', methodName='setAnzahl', args=[3]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_3', instruction='call', instanceName='scriptTableActor', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_4', instruction='call', instanceName='scriptTableActor', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_5', instruction='call', instanceName='scriptTableActor', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_5</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_6', instruction='call', instanceName='scriptTableActor', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_6</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_7', instruction='call', instanceName='scriptTableActor', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_7</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_8', instruction='call', instanceName='scriptTableActor', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_8</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp ../../../build/classes/java/main:../../../build/classes/java/test:../../../build/classes/groovy/main  :../../../build/classes/groovy/test:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/5bbfae12cc73b94f43873cee13b8f226cedb8ab1/fitnesse-20250223-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>386</totalRunTimeInMillis>
+</testResults>
+

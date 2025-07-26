@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20250223</FitNesseVersion>
+  <rootPath>PriceCalculations</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>65</exceptions>
+    </counts>
+    <date>2025-07-24T17:41:27+02:00</date>
+    <runTimeInMillis>232</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="SetUp"&gt;.SetUp&lt;/a&gt; &lt;a href="SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=fit&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/groovy/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/groovy/test&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="0"&gt;Preisberechnungs-Tests&lt;/h1&gt;
+&lt;br/&gt;Diese Seite testet die Mengenrabatt-Staffelung unserer Online-Buchhandlung.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/groovy/main  &lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../build/classes/groovy/test&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;de.tutorial.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="1"&gt;Geschäftsregeln&lt;/h2&gt;
+&lt;br/&gt;* 0-2 Bücher: Kein Rabatt&lt;br/&gt;* 3-4 Bücher: 5% Rabatt&lt;br/&gt;* 5-9 Bücher: 10% Rabatt&lt;br/&gt;* 10+ Bücher: 15% Rabatt&lt;br/&gt;&lt;br/&gt;&lt;h2 id="2"&gt;Test-Tabelle: Mengenrabatte&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="8"&gt;Decision: de.tutorial.fixtures.SimplePriceCalculationFixture &lt;span class="error"&gt;Could not find class de.tutorial.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;buchpreis&lt;/td&gt;
+		&lt;td&gt;anzahl&lt;/td&gt;
+		&lt;td&gt;rabattsatz?&lt;/td&gt;
+		&lt;td&gt;zwischensumme?&lt;/td&gt;
+		&lt;td&gt;rabattbetrag?&lt;/td&gt;
+		&lt;td&gt;endpreis?&lt;/td&gt;
+		&lt;td&gt;mehrwertsteuer?&lt;/td&gt;
+		&lt;td&gt;gesamtpreisMitMwst?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;0% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;0.00 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;2.80 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;42.75 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;2 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;0% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;79.90 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;0.00 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;79.90 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;5.59 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;85.49 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;3 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;5% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;119.85 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;5.99 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;113.86 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;7.97 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;121.83 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;4 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;5% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;159.80 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;7.99 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;151.81 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;10.63 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;162.44 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;5 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;10% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;199.75 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;19.98 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;179.77 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;12.58 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;192.35 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;9 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;10% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;359.55 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;35.96 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;323.59 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;22.65 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;346.24 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;10 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;15% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;399.50 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;59.93 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;339.57 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;23.77 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;363.34 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;39.95 &lt;span class="error"&gt;The instance decisionTable_1.setBuchpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;20 &lt;span class="error"&gt;The instance decisionTable_1.setAnzahl. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;15% &lt;span class="error"&gt;The instance decisionTable_1.rabattsatz. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;799.00 &lt;span class="error"&gt;The instance decisionTable_1.zwischensumme. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;119.85 &lt;span class="error"&gt;The instance decisionTable_1.rabattbetrag. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;679.15 &lt;span class="error"&gt;The instance decisionTable_1.endpreis. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;47.54 &lt;span class="error"&gt;The instance decisionTable_1.mehrwertsteuer. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;726.69 &lt;span class="error"&gt;The instance decisionTable_1.gesamtpreisMitMwst. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Test-Ergebnisse&lt;/h2&gt;
+&lt;br/&gt;Die Tests zeigen:&lt;br/&gt;* Rabatte werden korrekt nach Anzahl gestaffelt&lt;br/&gt;* MwSt&lt;a title="create page" href="MwSt?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt; wird auf den rabattierten Preis berechnet (7%)&lt;br/&gt;* Alle Beträge werden auf 2 Dezimalstellen gerundet&lt;br/&gt;</content>
+    <relativePageName>PriceCalculations</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='de.tutorial.fixtures'}</instruction>
+        <slimResult>pass(de.tutorial.fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>de.tutorial.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='de.tutorial.fixtures.SimplePriceCalculationFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not find class de.tutorial.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_5', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_5</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_7', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_7</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_8', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_8</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_9', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_9</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_10', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_10</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_11', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_11</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_12</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_14', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_14</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_15', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_15</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_17', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_17</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_18', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_18</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_19', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_19</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_20', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_20</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_21', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_21</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_22', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_22</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_24', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_24</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_25', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[3]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_25</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_27', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_27</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_28', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_28</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_29', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_29</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_30', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_30</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_31', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_31</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_32', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_32</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_34', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_34</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_35', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_35</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_37', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_37</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_38', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_38</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_39', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_39</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_40', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_40</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_41', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_41</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_42', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_42</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_44', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_44</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_45', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[5]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_45</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_47', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_47</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_48', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_48</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_49', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_49</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_50', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_50</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_51', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_51</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_52', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_52</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_54', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_54</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_55', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[9]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_55</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_57', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_57</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_58', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_58</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_59', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_59</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_60', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_60</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_61', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_61</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_62', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_62</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_64', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_64</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_65', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[10]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_65</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_67', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_67</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_68', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_68</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_69', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_69</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_70', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_70</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_71', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_71</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_72', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_72</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_74', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[39.95]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_74</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setBuchpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_75', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[20]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_75</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.setAnzahl. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_77', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_77</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattsatz. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_78', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_78</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.zwischensumme. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_79', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_79</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.rabattbetrag. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_80', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_80</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.endpreis. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_81', instruction='call', instanceName='decisionTable_1', methodName='mehrwertsteuer', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_81</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.mehrwertsteuer. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_82', instruction='call', instanceName='decisionTable_1', methodName='gesamtpreisMitMwst', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_82</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance decisionTable_1.gesamtpreisMitMwst. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp ../../../build/classes/java/main:../../../build/classes/java/test:../../../build/classes/groovy/main  :../../../build/classes/groovy/test:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/5bbfae12cc73b94f43873cee13b8f226cedb8ab1/fitnesse-20250223-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>429</totalRunTimeInMillis>
+</testResults>
+

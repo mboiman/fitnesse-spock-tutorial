@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20250223</FitNesseVersion>
+  <rootPath>PriceCalculations</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2025-07-24T17:28:46+02:00</date>
+    <runTimeInMillis>109</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;h1 id="0"&gt;Preisberechnungs-Tests&lt;/h1&gt;
+&lt;br/&gt;Diese Seite testet die Mengenrabatt-Staffelung unserer Online-Buchhandlung.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Geschäftsregeln&lt;/h2&gt;
+&lt;br/&gt;* 0-2 Bücher: Kein Rabatt&lt;br/&gt;* 3-4 Bücher: 5% Rabatt&lt;br/&gt;* 5-9 Bücher: 10% Rabatt&lt;br/&gt;* 10+ Bücher: 15% Rabatt&lt;br/&gt;&lt;br/&gt;&lt;h2 id="2"&gt;Test-Tabelle: Mengenrabatte&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="8" class="error"&gt;de.tutorial.fixtures.PriceCalculationFixture&lt;hr/&gt; &lt;span class="fit_label"&gt;Class de.tutorial.fixtures.PriceCalculationFixture is not a fixture.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;buchpreis&lt;/td&gt;
+		&lt;td&gt;anzahl&lt;/td&gt;
+		&lt;td&gt;rabattsatz?&lt;/td&gt;
+		&lt;td&gt;zwischensumme?&lt;/td&gt;
+		&lt;td&gt;rabattbetrag?&lt;/td&gt;
+		&lt;td&gt;endpreis?&lt;/td&gt;
+		&lt;td&gt;mehrwertsteuer?&lt;/td&gt;
+		&lt;td&gt;gesamtpreis mit mwst?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0%&lt;/td&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;0.00&lt;/td&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;2.80&lt;/td&gt;
+		&lt;td&gt;42.75&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;0%&lt;/td&gt;
+		&lt;td&gt;79.90&lt;/td&gt;
+		&lt;td&gt;0.00&lt;/td&gt;
+		&lt;td&gt;79.90&lt;/td&gt;
+		&lt;td&gt;5.59&lt;/td&gt;
+		&lt;td&gt;85.49&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;5%&lt;/td&gt;
+		&lt;td&gt;119.85&lt;/td&gt;
+		&lt;td&gt;5.99&lt;/td&gt;
+		&lt;td&gt;113.86&lt;/td&gt;
+		&lt;td&gt;7.97&lt;/td&gt;
+		&lt;td&gt;121.83&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;5%&lt;/td&gt;
+		&lt;td&gt;159.80&lt;/td&gt;
+		&lt;td&gt;7.99&lt;/td&gt;
+		&lt;td&gt;151.81&lt;/td&gt;
+		&lt;td&gt;10.63&lt;/td&gt;
+		&lt;td&gt;162.44&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;10%&lt;/td&gt;
+		&lt;td&gt;199.75&lt;/td&gt;
+		&lt;td&gt;19.98&lt;/td&gt;
+		&lt;td&gt;179.77&lt;/td&gt;
+		&lt;td&gt;12.58&lt;/td&gt;
+		&lt;td&gt;192.35&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+		&lt;td&gt;10%&lt;/td&gt;
+		&lt;td&gt;359.55&lt;/td&gt;
+		&lt;td&gt;35.96&lt;/td&gt;
+		&lt;td&gt;323.59&lt;/td&gt;
+		&lt;td&gt;22.65&lt;/td&gt;
+		&lt;td&gt;346.24&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;15%&lt;/td&gt;
+		&lt;td&gt;399.50&lt;/td&gt;
+		&lt;td&gt;59.93&lt;/td&gt;
+		&lt;td&gt;339.57&lt;/td&gt;
+		&lt;td&gt;23.77&lt;/td&gt;
+		&lt;td&gt;363.34&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;39.95&lt;/td&gt;
+		&lt;td&gt;20&lt;/td&gt;
+		&lt;td&gt;15%&lt;/td&gt;
+		&lt;td&gt;799.00&lt;/td&gt;
+		&lt;td&gt;119.85&lt;/td&gt;
+		&lt;td&gt;679.15&lt;/td&gt;
+		&lt;td&gt;47.54&lt;/td&gt;
+		&lt;td&gt;726.69&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="3"&gt;Test-Ergebnisse&lt;/h2&gt;
+&lt;br/&gt;Die Tests zeigen:&lt;br/&gt;* Rabatte werden korrekt nach Anzahl gestaffelt&lt;br/&gt;* MwSt&lt;a title="create page" href="MwSt?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt; wird auf den rabattierten Preis berechnet (7%)&lt;br/&gt;* Alle Beträge werden auf 2 Dezimalstellen gerundet&lt;br/&gt;</content>
+    <relativePageName>PriceCalculations</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp build/classes/java/main:build/classes/java/test:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/5bbfae12cc73b94f43873cee13b8f226cedb8ab1/fitnesse-20250223-standalone.jar fit.FitServer MacMiniM4.local 62938 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>406</totalRunTimeInMillis>
+</testResults>
+

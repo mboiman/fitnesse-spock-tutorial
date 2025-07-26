@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20250223</FitNesseVersion>
+  <rootPath>DemoTest</rootPath>
+  <result>
+    <counts>
+      <right>15</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2025-07-24T21:55:10+02:00</date>
+    <runTimeInMillis>81</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="SetUp"&gt;.SetUp&lt;/a&gt; &lt;a href="SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/3.5.3/4ba7817f958e9a0b0f642af98440affd0c7e2ee0/spring-boot-starter-web-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/3.5.3/8494346cf0bdb148ef29d5f41647b0cd6908ad7d/spring-boot-starter-data-jpa-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/3.5.3/aaa11ca06f6701717dd7f07666079285e1a566bb/spring-boot-starter-validation-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-spring/2.4-M6-groovy-4.0/51e4c6bc0b5f2fa871c7b178fac23769240ac44e/spock-spring-2.4-M6-groovy-4.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/2.4-M6-groovy-4.0/75888c090beef01c99e03f59ae09be5645420445/spock-core-2.4-M6-groovy-4.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/5.5.0/1bc7b4c046c2e00a37bf78f2d9d7b41a43fdd5d1/rest-assured-5.5.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.rest-assured/xml-path/5.5.5/5c585c9ec0f3b5075306904f1577f4305f96fa99/xml-path-5.5.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.rest-assured/json-path/5.5.5/3efb6812c5bdd31ae58cc591e6b1d76bc2618b0f/json-path-5.5.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.groovy/groovy-json/4.0.27/9f5bfdf5b32255c828a36286ac03ac8fc08dd40c/groovy-json-4.0.27.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.groovy/groovy-xml/4.0.27/6764c2ceaa8ce6d87ffef925bd3832a3ca30e5aa/groovy-xml-4.0.27.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured-common/5.5.5/4454a7397dd5dcd139ab0363c24c506c0ffb39ab/rest-assured-common-5.5.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.groovy/groovy/4.0.24/1ebfbe13ba203625f53bab37a895954b2c160508/groovy-4.0.24.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/3.5.3/916e174221d2b9c770ecc12c8adc2bf2b75ff49/spring-boot-starter-test-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-json/3.5.3/fe424c3edf444e65e3c3331a1538d31396225a3b/spring-boot-starter-json-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/3.5.3/427ff2d6cc12a5e503b1be8508db08f0c05098c0/spring-boot-starter-jdbc-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/3.5.3/b978e45d89b92eedaa09d0993bed91bcf00153d4/spring-boot-starter-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/3.5.3/7013c1aff95fd599eb291fe34924c59d1ea88c5b/spring-boot-starter-logging-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.5.18/fc371f3fc97a639de2d67947cffb7518ec5e3d40/logback-classic-1.5.18.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/5bbfae12cc73b94f43873cee13b8f226cedb8ab1/fitnesse-20250223-standalone.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/81bed4b3e9c38842ab4de19778f687730b2290f9/fitnesse-20250223.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/3.5.1/7d34c2d8c8bcd96f5ce3f012c2a88d682a86e14b/spring-data-jpa-3.5.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.velocity/velocity-engine-core/2.4.1/b662837e8006d5c383bd128503ea86ef5b4d361/velocity-engine-core-2.4.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-jdk14/2.0.17/69829f245d0720a6e7a796e4920f2393f29bdece/slf4j-jdk14-2.0.17.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.9.0/37fe2217f577b0b68b18e62c4d17a8858ecf9b69/json-path-2.9.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/6.3.0/bebd113244c9d9926c6b792f28110ed6380cacc2/HikariCP-6.3.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/3.5.1/90bd3f9edcc3b98e0d49657f3f2152e933b42ae8/spring-data-commons-3.5.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.24.3/da1143e2a2531ee1c2d90baa98eb50a28a39d5a7/log4j-to-slf4j-2.24.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/2.0.17/524cb6ccc2b68a57604750e1ab8b13b5a786a6aa/jul-to-slf4j-2.0.17.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.17/d9e58ac9c7779ba3bf8142aff6c830617a7fe60f/slf4j-api-2.0.17.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.h2database/h2/2.3.232/4fcc05d966ccdb2812ae8b9a718f69226c0cf4e2/h2-2.3.232.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/3.5.3/490bccd84af19bddcb955e722c8dcebc34cb2193/spring-boot-starter-tomcat-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/6.2.8/a98cbaba4b55b4fee2d752041130e2e0f7014b27/spring-webmvc-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/6.2.8/7b6a4ffb12639779721bc5adbc7f5ba80db72ff9/spring-web-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.6.18.Final/c3d150af4c341a7b07c75a8905bfbba895e73fbc/hibernate-core-6.6.18.Final.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/6.2.8/30cd83452beef146187bee60a824fe3ae7197d85/spring-aspects-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/10.1.42/a82416ce2960c50ee8150c9229e058b826e070a8/tomcat-embed-el-10.1.42.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.hibernate.validator/hibernate-validator/8.0.2.Final/220e64815dd87535525331de20570017f899eb13/hibernate-validator-8.0.2.Final.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.5.18/6c0375624f6f36b4e089e2488ba21334a11ef13f/logback-core-1.5.18.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.leangen.geantyref/geantyref/1.3.16/177fe050a1ecc6f121bd3ffa511f2f5ce9099f00/geantyref-1.3.16.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.12.2/79d49ad13017c67a8bf76e10ba5ac8937d811772/junit-platform-launcher-1.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.12.2/64d3ec64ae06517bc14b7faaaec7c996b0d05bea/junit-jupiter-5.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.12.2/b8df7575b8cd3a94dbe27b481d1cd52c57864559/junit-jupiter-engine-5.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.12.2/8519ece93f91b8115705d36be2c36d49808935cd/junit-platform-engine-1.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.17.0/4399e19e3fb5b55230027583323e4c883d5da07d/mockito-junit-jupiter-5.17.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.12.2/ff1434a66d1fb84c2c709cde2e2d56d5c8f4fad3/junit-jupiter-params-5.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.12.2/6de3a3256c5d90f4a439edcb6c2e8dc5180907b0/junit-jupiter-api-5.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.12.2/b89e88a89ee009937374a4c96912e007b34c8e35/junit-platform-commons-1.12.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.awaitility/awaitility/4.2.2/7336242073ebf83fe034e42b46a403c5501b63c9/awaitility-4.2.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/3.0/8fd9b78a8e6a6510a078a9e30e9e86a6035cfaf7/hamcrest-3.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.htmlparser/htmlparser/2.1/c752e5984b7767533cbd3fdffa48cecb52fa226c/htmlparser-2.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.htmlparser/htmllexer/2.1/2ebf2c073e649b7e674cddd0558ff102a486402f/htmllexer-2.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.13.0/ba2ed5521c491cabf7ecdb57f77922561c2e8958/commons-text-1.13.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.17.0/b17d2136f0460dcc0d2016ceefca8723bdf4ee70/commons-lang3-3.17.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.json/json/20250107/a1b5f0b5a1ce018b93a691c57ffc7d141b3a10f1/json-20250107.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.googlecode.java-diff-utils/diffutils/1.3.0/7e060dd5b19431e6d198e91ff670644372f60fbd/diffutils-1.3.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.6/c84c9a8ce807e655568e331b522ab091586ccbb6/nashorn-core-15.6.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/3.5.3/50d834241863042463113287b71bfc719d32dac1/spring-boot-test-autoconfigure-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/3.5.3/dd4c87534ae57510b01575c374eb8d55dd4efb92/spring-boot-test-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/4.0.5/ca84c2a7169b5293e232b9d00d1e4e36d4c3914a/jaxb-runtime-4.0.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/4.0.5/7b4b11ea5542eea4ad55e1080b23be436795b3/jaxb-core-4.0.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.2/6cd5a999b834b63238005b7144136379dc36cad2/jakarta.xml.bind-api-4.0.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.5.2/95d166b18f95907be0f46cdb9e1c0695eed03387/json-smart-2.5.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.27.3/31f5d58a202bd5df4993fb10fa2cffd610c20d6f/assertj-core-3.27.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.17.0/f5fe5a2f94eb65f4f83ca0607bfe13ec0d9c6f3b/mockito-core-5.17.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.3/aaa43e0823d2a0e106e8754d6a9c4ab24e05e9bc/jsonassert-1.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/6.2.8/f7a691aa541ec9299fdeb4d2d9a61b4c821abcf2/spring-test-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.5.3/b03483a9d3c480d064c8380e2d78ea3593ca6cb8/spring-boot-autoconfigure-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.5.3/1b02976773afc2489df3c22000acaf83d0ada2b2/spring-boot-3.5.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/6.2.8/9db99fe5f92f587e8f2b26b34a7f42260169925a/spring-context-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/6.2.8/435fb310d5f464050b91ac3cb1a7f217a471e62e/spring-aop-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/6.2.8/3bfe2a04c09ad1d7738b16e6e4636a7255be3af8/spring-orm-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/6.2.8/2927be130aa08d6513804a048eb6065ab5c51a1d/spring-jdbc-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/6.2.8/6b2eecf34f0810dd989f7e7bfa8fd8c86fe28dfb/spring-tx-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/6.2.8/9da1e690f343c30b6ed6eabd5f60ecc5dd0b225a/spring-beans-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/6.2.8/19e6618120fab6a572880675e1c0af676c7aa4ac/spring-expression-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/6.2.8/2caf1cef93252f5ef2b7f334b8b4d61f3aecad15/spring-core-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.10.2/96f4a5350433f58b3e0e7d1b862bfcd52fc8da6b/xmlunit-core-2.10.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.13/efc110bad4a0d45cda7858e6beee1d8a8313da5a/httpmime-4.5.13.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ccil.cowan.tagsoup/tagsoup/1.2.1/5584627487e984c03456266d3f8802eb85a9ce97/tagsoup-1.2.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.1.1/48b9bda22b091b1f48b13af03fe36db3be6e1ae3/jakarta.annotation-api-2.1.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/2.4/e0666b825b796f85521f02360e77f4c92c5a7a07/snakeyaml-2.4.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.19.1/e9df57105f3b0730040ad7f3a1b603684a3329f4/jackson-datatype-jsr310-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.19.1/133a9dc4ff2413035dc7ca8a9aa6a1da3667ddfb/jackson-module-parameter-names-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.19.1/37e4f0c5dba684e00137defdb04ad9df95920c44/jackson-annotations-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.19.1/6e5a8cb8a6cada322497cefb7726657d98aaee15/jackson-core-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.19.1/eabbc99d0e146b1a7085fddd02568faf1d3b4ab1/jackson-datatype-jdk8-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.19.1/e8cb8e76faea3e0791165f5d3614fc45933b2ee0/jackson-databind-2.19.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/10.1.42/e47e420583a372feaece0dc9b8a9a63c4bfcd093/tomcat-embed-websocket-10.1.42.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/10.1.42/8906a203edef16fa6013635925bf9f5d1dbe5639/tomcat-embed-core-10.1.42.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-observation/1.15.1/3d0a62a46350707984e3600297cc8e08c4722399/micrometer-observation-1.15.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.persistence/jakarta.persistence-api/3.1.0/66901fa1c373c6aff65c13791cc11da72060a8d6/jakarta.persistence-api-3.1.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/2.0.1/51a520e3fae406abb84e2e1148e6746ce3f80a1a/jakarta.transaction-api-2.0.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.6.1.Final/886afbb445b4016a37c8960a7aef6ebd769ce7e5/jboss-logging-3.6.1.Final.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/7.0.3.Final/e183c4be8bb41d12e9f19b374e00c34a0a85f439/hibernate-commons-annotations-7.0.3.Final.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.smallrye/jandex/3.2.0/f17ad860f62a08487b9edabde608f8ac55c62fa7/jandex-3.2.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.7.0/e98374da1f2143ac8e6e0a95036994bb19137a3/classmate-1.7.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.17.6/8c70cbc6950b2ae5291a98d5003e06406d633803/byte-buddy-1.17.6.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/2.0.1/4c28afe1991a941d7702fe1362c365f0a8641d1e/jakarta.inject-api-2.0.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.13.0/5a02e48521624faaf5ff4d99afc88b01686af655/antlr4-runtime-4.13.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.24/9b5aeb0cea9f958b9c57fb80e62996e95a3e9379/aspectjweaver-1.9.24.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/3.0.2/92b6631659ba35ca09e44874d3eb936edfeee532/jakarta.validation-api-3.0.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/7.3.1/daaa79ef260eb67404b9a52bc319a024c7f49cfe/asm-commons-7.3.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/7.3.1/cac1bf54c2fb86671c357d281d1060fe5d50a0de/asm-util-7.3.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/7.3.1/45dfd299ea0c17d534499c4f06417ceccfa2d02/asm-analysis-7.3.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/7.3.1/587ce54d243145b2e89598bfcea7823ded73be5d/asm-tree-7.3.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.5.2/ce16fd235cfee48e67eda33e684423bba09f7d07/accessors-smart-2.5.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.7.1/f0ed132a49244b042cd0e15702ab9f2ce3cc8436/asm-9.7.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/2.0.2/41f1e0ddd157c856926ed149ab837d110955a9fc/angus-activation-2.0.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.3/fa165bd70cda600368eee31555222776a46b881f/jakarta.activation-api-2.1.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.6/17b32fd9f57deef02842f7f05abc4ad8127fe34e/byte-buddy-agent-1.17.6.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/6.2.8/b806d8d270a8eebaca56f6b4dae8f627460b0d4e/spring-jcl-6.2.8.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.18.0/ee45d1cf6ec2cc2b809ff04b4dc7aec858e0df8f/commons-codec-1.18.0.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.15.1/43cbe2327f4e3f5cbfda6be64418c66b9b62f4ec/micrometer-commons-1.15.1.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.24.3/b02c125db8b6d295adf72ae6e71af5d83bce2370/log4j-api-2.24.3.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.5/f36a4ef12120a9bb06d766d6a0e54b144fd7ed98/txw2-4.0.5.jar:/Users/ai/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/4.1.2/18ec117c85f3ba0ac65409136afa8e42bc74e739/istack-commons-runtime-4.1.2.jar:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/resources/main:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/resources/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../../build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../../build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../../build/classes/groovy/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../../build/classes/groovy/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: ../../../../build/libs/*.jar&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="0"&gt;Demo Test - Einfache Berechnung&lt;/h1&gt;
+&lt;br/&gt;Dies ist ein einfacher Test um zu zeigen, dass &lt;a href="FitNesse"&gt;FitNesse&lt;/a&gt; funktioniert.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Einfache Addition mit Decision Table&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;de.tutorial.fixtures.SimpleCalculator&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;a&lt;/td&gt;
+		&lt;td&gt;b&lt;/td&gt;
+		&lt;td&gt;addPlusEquals?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;5&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;15&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;25&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td&gt;200&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;300&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h2 id="2"&gt;Preisberechnung&lt;/h2&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="6"&gt;&lt;span class="pass"&gt;de.tutorial.fixtures.SimplePriceTable&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;buchpreis&lt;/td&gt;
+		&lt;td&gt;anzahl&lt;/td&gt;
+		&lt;td&gt;rabattsatz?&lt;/td&gt;
+		&lt;td&gt;zwischensumme?&lt;/td&gt;
+		&lt;td&gt;rabattbetrag?&lt;/td&gt;
+		&lt;td&gt;endpreis?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;10.00&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0%&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;10.00&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0.00&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;10.00&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;10.00&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;5%&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;30.00&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1.50&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;28.50&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;10.00&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;10%&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;50.00&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;5.00&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;45.00&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>DemoTest</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='de.tutorial.fixtures.SimpleCalculator', args=[]}</instruction>
+        <slimResult>pass(de.tutorial.fixtures.SimpleCalculator)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>de.tutorial.fixtures.SimpleCalculator</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_4', instruction='call', instanceName='decisionTable_0', methodName='setA', args=[2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_5', instruction='call', instanceName='decisionTable_0', methodName='setB', args=[3]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_7', instruction='call', instanceName='decisionTable_0', methodName='addPlusEquals', args=[]}</instruction>
+        <slimResult>pass(5)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_7</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>5</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_9', instruction='call', instanceName='decisionTable_0', methodName='setA', args=[10]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_9</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_10', instruction='call', instanceName='decisionTable_0', methodName='setB', args=[15]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_10</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_12', instruction='call', instanceName='decisionTable_0', methodName='addPlusEquals', args=[]}</instruction>
+        <slimResult>pass(25)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_12</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>25</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_14', instruction='call', instanceName='decisionTable_0', methodName='setA', args=[100]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_14</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_15', instruction='call', instanceName='decisionTable_0', methodName='setB', args=[200]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_15</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_17', instruction='call', instanceName='decisionTable_0', methodName='addPlusEquals', args=[]}</instruction>
+        <slimResult>pass(300)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_17</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>300</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='de.tutorial.fixtures.SimplePriceTable', args=[]}</instruction>
+        <slimResult>pass(de.tutorial.fixtures.SimplePriceTable)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>de.tutorial.fixtures.SimplePriceTable</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[10.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_5', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_7', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult>pass(0%)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_7</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>0%</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_8', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult>pass(10.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_8</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>10.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_9', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult>pass(0.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_9</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>0.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_10', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult>pass(10.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_10</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>10.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[10.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_12</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_13', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[3]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_13</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_15', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult>pass(5%)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_15</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>5%</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_16', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult>pass(30.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_16</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>30.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_17', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult>pass(1.50)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_17</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>1.50</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_18', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult>pass(28.50)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_18</instructionId>
+          <col>5</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>28.50</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_20', instruction='call', instanceName='decisionTable_1', methodName='setBuchpreis', args=[10.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_20</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_21', instruction='call', instanceName='decisionTable_1', methodName='setAnzahl', args=[5]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_21</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_23', instruction='call', instanceName='decisionTable_1', methodName='rabattsatz', args=[]}</instruction>
+        <slimResult>pass(10%)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_23</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>10%</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_24', instruction='call', instanceName='decisionTable_1', methodName='zwischensumme', args=[]}</instruction>
+        <slimResult>pass(50.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_24</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>50.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_25', instruction='call', instanceName='decisionTable_1', methodName='rabattbetrag', args=[]}</instruction>
+        <slimResult>pass(5.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_25</instructionId>
+          <col>4</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>5.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_26', instruction='call', instanceName='decisionTable_1', methodName='endpreis', args=[]}</instruction>
+        <slimResult>pass(45.00)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_26</instructionId>
+          <col>5</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>45.00</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/opt/homebrew/opt/openjdk@17/bin/java -cp /Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/main:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/java/test:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/main:/Users/ai/Developer/claude-flows/fitnesse-spock-tutorial/build/classes/groovy/test:/Users/ai/.gradle/caches/modules-2/files-2.1/org.fitnesse/fitnesse/20250223/5bbfae12cc73b94f43873cee13b8f226cedb8ab1/fitnesse-20250223-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>255</totalRunTimeInMillis>
+</testResults>
+
