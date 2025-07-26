@@ -114,11 +114,20 @@ jobs:
         echo "📁 Contents of ./reports:"
         ls -la ./reports/ || echo "No reports directory found"
         
+        echo "📁 Looking for FitNesse results in artifact:"
+        find ./reports -name "testResults" -type d || echo "No testResults found"
+        
         # Copy test reports preserving structure
         if [ -d "./reports" ]; then
           cp -r ./reports/* pages/
           echo "✅ Copied reports to pages directory"
         fi
+        
+        echo "📁 After copy - checking pages directory:"
+        find pages -name "testResults" -type d || echo "No testResults in pages"
+        
+        echo "📁 Looking for XML files:"
+        find pages -name "*.xml" | head -10 || echo "No XML files found"
         
         # Create FitNesse results index
         echo "📋 Creating FitNesse results index..."
